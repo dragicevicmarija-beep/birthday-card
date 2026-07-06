@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: Bubblegum;
+  overflow: hidden;
+  position: relative;
+}
+#questionScreen {
+  position: relative;
+  width: 100%;
+  height: 100%; /* or whatever fits your layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+#monkey {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  right: 5%;
+  bottom: 10%;
+}
+#catThink {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  left: 5%;
+  bottom: 10%;
+}
+#question {
+  position: absolute;
+  font-size: 6vh;
+  top: 20%;
+  color: rgb(255, 255, 255);
+}
+#buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px; /* space below the question */
+}
+
+#noButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: black;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  /* Remove transform - it breaks layout */
+}
+#questionScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  overflow: visible;
+}
+
+#yesButton {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 10px;
+}
+
+#noButton {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 10px;
+}
+
+/* Fix the hamster positioning */
+#hampster {
+  display: block;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  rotate: 180deg;
+  transform: translateX(-50%) translateY(50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 2s cubic-bezier(0.34, 1.2, 0.64, 1);
+  z-index: 10;
+  will-change: transform, opacity;
+}
+
+#yesButton:hover + #hampster {
+  transform: translateX(-50%) translateY(+20%);
+  opacity: 1;
+}
+#yesimage {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+#noimage {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+#giftScreen {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#giftButton {
+  background-color: transparent;
+  border: none;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  /* ↓↓↓ Center the button perfectly in the middle of the screen */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* ↑↑↑ */
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#present {
+  width: 350px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+#present:hover {
+  transform: scale(1.1);
+}
+
+#circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+  height: 197px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#arrow {
+  width: 140px;
+  height: 250px;
+  position: absolute;
+  left: 23%;
+  bottom: 0;
+  rotate: 190deg;
+}
+
+#arrow1 {
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  right: 32%;
+  top: 7%;
+  rotate: -10deg;
+}
+
+#nga {
+  width: 370px;
+  height: 160px;
+  position: absolute;
+  left: 30%;
+  top: 0px;
+  rotate: 180deg;
+}
+#comp {
+  width: 370px;
+  height: 200px;
+  position: absolute;
+  left: 5%;
+  top: 3%;
+  rotate: 30deg;
+}
+#sbilly {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  right: -10%;
+  top: 20%;
+  rotate: -90deg;
+}
+
+#shockEmoji {
+  width: 200px;
+  height: 330px;
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  rotate: -67deg;
+  z-index: 50;
+}
+
+#will {
+  position: absolute;
+  left: 5%;
+  top: 37%;
+  width: 450px;
+  height: 300px;
+}
+#deer {
+  position: absolute;
+  left: 33%;
+  bottom: 0;
+  width: 450px;
+  height: 180px;
+}
+#guys {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  rotate: 0deg;
+}
+
+#holy {
+  position: absolute;
+  right: 13%;
+  bottom: 25%;
+  width: 400px;
+  height: 200px;
+  z-index: 50;
+  rotate: 20deg;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg) scale(0.01);
+  }
+  to {
+    transform: rotate(3240deg) scale(1);
+  }
+}
+
+.mina-spin {
+  animation: spin 2s linear forwards;
+}
+
+#mina {
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  z-index: 20;
+  position: relative;
+  display: none;
+}
+
+#explosion {
+  width: 400px;
+  height: auto;
+  z-index: 30;
+  position: relative;
+  display: none;
+}
+#finalScreen {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background-color: #111214;
+}
+#hbd {
+  font-size: 7vh;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 4%;
+  left: 27%;
+  margin-bottom: 10px;
+}
+#queen {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 20%;
+  top: 15%;
+  rotate: -20deg;
+}
+#threecats {
+  position: absolute;
+  height: 200px;
+  width: 350px;
+  right: 0;
+  bottom: 0;
+}
+#justin {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 400px;
+  width: 400px;
+  rotate: 5deg;
+}
+#baloons {
+  display: flex;
+  flex-direction: row;
+  height: 270px;
+  width: 300px;
+  position: absolute;
+  right: 18%;
+  top: 15%;
+  rotate: 20deg;
+}
+#decor1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: auto;
+  z-index: 60;
+}
+#decor {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: auto;
+  z-index: 60;
+}
+#leclerk {
+  position: absolute;
+  right: 25%;
+  bottom: 0;
+  width: 200px;
+  height: auto;
+  z-index: 60;
+  rotate: 20deg;
+}
+#slavko {
+  width: 400px;
+  height: 400px;
+  left: 36%;
+  top: 20%;
+  border-radius: 20px;
+  z-index: 40;
+  position: relative;
+  transition: transform 0.3s ease;
+  margin-top: 20px;
+}

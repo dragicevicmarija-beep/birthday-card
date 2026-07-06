@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bday card:></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="questionScreen">
+      <p id="question">
+        Is it thy day of birth today?(maybe??(perchance?!?!?))
+      </p>
+      <img src="../images/cat (2).png" id="catThink" />
+      <img src="../images/monkey.png" id="monkey" />
+      <div id="buttons">
+        <button id="yesButton">
+          <img src="../images/yesbutton.png" id="yesimage" />
+        </button>
+
+        <!-- HAMPSTER - immediate sibling of yes button -->
+        <img id="hampster" src="../images/bday hampster.png" />
+
+        <!-- NO BUTTON - separate -->
+        <button id="noButton">
+          <img src="../images/nobutton.png" id="noimage" />
+        </button>
+      </div>
+    </div>
+    <div id="noScreen" style="display: none">
+      <p style="font-size: 7vh; color: white">ne laži jevrejčino</p>
+      <p>aj murš nazad</p>
+    </div>
+    <div id="giftScreen" style="display: none">
+      <button id="giftButton">
+        <img src="../images/present.png" id="present" />
+      </button>
+      <img src="../images/shock_emoji.png" id="shockEmoji" />
+      <img src="../images/comp.png" id="comp" />
+      <img src="../images/arrow.png" id="arrow" />
+      <img src="../images/deer.png" id="deer" />
+      <img src="../images/arrow.png" id="arrow1" />
+      <img src="../images/shock billy.png" id="sbilly" />
+      <img src="../images/will.png" id="will" />
+      <img src="../images/niger.png" id="nga" />
+      <img src="../images/shock.png" id="guys" />
+      <img src="../images/holymoly.png" id="holy" />
+    </div>
+
+    <img id="mina" src="../images/mina.png" style="display: none" />
+    <img id="explosion" src="../images/explosion.jpg" style="display: none" />
+
+    <div id="finalScreen">
+      <p id="hbd">HAPPY BIRTHDAY QUEEN🎉🎉</p>
+      <img id="slavko" src="../images/slavicabday.png" />
+      <img id="threecats" src="../images/3 cats.png" />
+      <img id="decor" src="../images//decor.png" />
+      <img id="decor1" src="../images//decor1.png" />
+      <img id="justin" src="../images//justin.png" />
+      <img id="queen" src="../images//queen.png" />
+      <img id="leclerk" src="../images/leclerk.png" />
+      <div id="baloons">
+        <img id="one" src="../images/one.png" />
+        <img id="six" src="../images/six.png" />
+      </div>
+    </div>
+    <audio id="popSound" src="../audios/madzik.mp3" preload="auto"></audio>
+    <audio id="bgMusic" src="../audios/kfad.mp3" preload="auto" loop></audio>
+    <audio id="kabum" src="../audios/kabum.mp3" preload="auto" loop></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
