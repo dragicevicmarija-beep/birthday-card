@@ -77,10 +77,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: black;
-  overflow: visible; /* Important for the peek effect */
+  overflow: visible;
 }
 
-/* Position the yes button */
 #yesButton {
   position: relative;
   z-index: 2;
@@ -88,10 +87,9 @@ body {
   border: none;
   background: transparent;
   padding: 0;
-  margin: 10px; /* Add some spacing */
+  margin: 10px;
 }
 
-/* Position the no button */
 #noButton {
   position: relative;
   z-index: 2;
@@ -119,7 +117,6 @@ body {
   will-change: transform, opacity;
 }
 
-/* Hover effect - now it works! */
 #yesButton:hover + #hampster {
   transform: translateX(-50%) translateY(+20%);
   opacity: 1;
@@ -151,10 +148,10 @@ body {
 }
 
 #giftButton {
-  background-color: black;
+  background-color: transparent;
   border: none;
-  width: 150px;
-  height: 150px;
+  width: 320px;
+  height: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,10 +164,11 @@ body {
   /* ↑↑↑ */
   z-index: 2;
   cursor: pointer;
+  border-radius: 50%;
 }
 
 #present {
-  width: 150px;
+  width: 350px;
   height: auto;
   display: block;
   transition: transform 0.3s ease;
@@ -204,11 +202,11 @@ body {
 #arrow1 {
   position: absolute;
   width: 150px;
-  height: 170px;
+  height: 200px;
   position: absolute;
   right: 32%;
-  top: 5%;
-  rotate: -20deg;
+  top: 7%;
+  rotate: -10deg;
 }
 
 #nga {
@@ -255,10 +253,10 @@ body {
 }
 #deer {
   position: absolute;
-  left: 30%;
-  bottom: 3%;
-  width: 500px;
-  height: 200px;
+  left: 33%;
+  bottom: 0;
+  width: 450px;
+  height: 180px;
 }
 #guys {
   width: 400px;
@@ -269,10 +267,8 @@ body {
   rotate: 0deg;
 }
 
-/* Added: keep #holy out of the flex flow so it doesn't push the button */
 #holy {
   position: absolute;
-  /* Adjust these values to wherever you want it placed */
   right: 13%;
   bottom: 25%;
   width: 400px;
@@ -286,7 +282,7 @@ body {
     transform: rotate(0deg) scale(0.01);
   }
   to {
-    transform: rotate(2880deg) scale(1);
+    transform: rotate(3240deg) scale(1);
   }
 }
 
@@ -356,7 +352,7 @@ body {
   position: absolute;
   right: 18%;
   top: 15%;
-  rotate: -20deg;
+  rotate: 20deg;
 }
 #decor1 {
   position: absolute;
@@ -374,6 +370,15 @@ body {
   height: auto;
   z-index: 60;
 }
+#leclerk {
+  position: absolute;
+  right: 25%;
+  bottom: 0;
+  width: 200px;
+  height: auto;
+  z-index: 60;
+  rotate: 20deg;
+}
 #slavko {
   width: 400px;
   height: 400px;
@@ -383,4 +388,5 @@ body {
   z-index: 40;
   position: relative;
   transition: transform 0.3s ease;
+  margin-top: 20px;
 }
