@@ -28,7 +28,7 @@ noButton.addEventListener("click", () => {
 });
 yesButton.addEventListener("click", () => {
   //load audios
-  kabum
+  /*kabum
     .play()
     .then(() => {
       kabum.pause();
@@ -50,7 +50,7 @@ yesButton.addEventListener("click", () => {
       bgMusic.pause();
       //bgMusic.currentTime = 0;
     })
-    .catch(() => {});
+    .catch(() => {});*/
   //GoToGiftScreen;
   questionScreen.style.display = "none";
   yesButton.style.display = "none";
@@ -70,10 +70,10 @@ function goToMina() {
   mina.classList.add("mina-spin");
 
   // Play pop sound once while mina rotates
-  if (audioReady) {
-    popSound.currentTime = 0;
-    popSound.play().catch(() => {});
-  }
+  //if (audioReady) {
+  popSound.currentTime = 0;
+  popSound.play().catch(() => {});
+  //}
 
   setTimeout(() => {
     // mina stays visible briefly, then explosion
@@ -81,10 +81,10 @@ function goToMina() {
       mina.style.display = "none";
       explosion.style.display = "block";
 
-      if (audioReady) {
-        kabum.currentTime = 0;
-        kabum.play().catch(() => {});
-      }
+      //if (audioReady) {
+      kabum.currentTime = 0;
+      kabum.play().catch(() => {});
+      //}
 
       setTimeout(() => {
         kabum.pause();
@@ -92,10 +92,10 @@ function goToMina() {
         finalScreen.style.display = "block";
 
         // Start background music
-        if (audioReady) {
-          bgMusic.currentTime = 0;
-          bgMusic.play().catch(() => {});
-        }
+        //if (audioReady) {
+        bgMusic.currentTime = 0;
+        bgMusic.play().catch(() => {});
+        //}
 
         document.addEventListener("keydown", handleSpacebar);
       }, 1000); // explosion duration
