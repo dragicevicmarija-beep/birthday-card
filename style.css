@@ -26,58 +26,46 @@ body {
   align-items: center;
   justify-content: center;
   background-color: black;
+  overflow: visible;
 }
 #monkey {
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 60%;
+  width: 25%;
   right: 5%;
   bottom: 10%;
 }
 #catThink {
   position: absolute;
-  height: 400px;
-  width: 400px;
+  height: 60%;
+  width: 25%;
   left: 5%;
   bottom: 10%;
 }
 #question {
   position: absolute;
-  font-size: 6vh;
+  font-size: 200%;
   top: 20%;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
 #buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-top: 20px; /* space below the question */
+  gap: 30%;
 }
-
 #noButton {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
   border: none;
-  background-color: black;
+  background-color: transparent;
   cursor: pointer;
-  width: 150px;
-  height: 150px;
-  /* Remove transform - it breaks layout */
-}
-#questionScreen {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  overflow: visible;
+  width: 80%;
+  height: 80%;
 }
 
 #yesButton {
@@ -87,24 +75,14 @@ body {
   border: none;
   background: transparent;
   padding: 0;
-  margin: 10px;
+  width: 80%;
+  height: 80%;
 }
 
-#noButton {
-  position: relative;
-  z-index: 2;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: 10px;
-}
-
-/* Fix the hamster positioning */
 #hampster {
   display: block;
-  height: 70px;
-  width: 70px;
+  height: 10%;
+  width: 5%;
   position: absolute;
   left: 10%;
   top: 0;
@@ -122,15 +100,15 @@ body {
   opacity: 1;
 }
 #yesimage {
-  width: 130px;
-  height: 130px;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
   pointer-events: none;
 }
 #noimage {
-  width: 130px;
-  height: 130px;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
   pointer-events: none;
