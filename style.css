@@ -128,25 +128,24 @@ body {
 #giftButton {
   background-color: transparent;
   border: none;
-  width: 320px;
-  height: 320px;
+  width: 20%; /* was 320px */
+  max-width: 320px; /* cap maximum size */
+  aspect-ratio: 1/1; /* maintain square */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-  /* ↓↓↓ Center the button perfectly in the middle of the screen */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* ↑↑↑ */
   z-index: 2;
   cursor: pointer;
   border-radius: 50%;
 }
 
 #present {
-  width: 350px;
+  width: 100%; /* fill the button */
   height: auto;
   display: block;
   transition: transform 0.3s ease;
@@ -161,16 +160,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 550px;
-  height: 197px;
+  width: 35%; /* was 550px */
+  max-width: 550px;
+  aspect-ratio: 550/197; /* maintain proportions */
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
 }
 
 #arrow {
-  width: 140px;
-  height: 250px;
+  width: 9%; /* was 140px */
+  max-width: 140px;
+  aspect-ratio: 140/250; /* maintain proportions */
   position: absolute;
   left: 23%;
   bottom: 0;
@@ -178,9 +179,9 @@ body {
 }
 
 #arrow1 {
-  position: absolute;
-  width: 150px;
-  height: 200px;
+  width: 9.5%; /* was 150px */
+  max-width: 150px;
+  aspect-ratio: 150/200;
   position: absolute;
   right: 32%;
   top: 7%;
@@ -188,24 +189,29 @@ body {
 }
 
 #nga {
-  width: 370px;
-  height: 160px;
+  width: 23%; /* was 370px */
+  max-width: 370px;
+  aspect-ratio: 370/160;
   position: absolute;
   left: 30%;
   top: 0px;
   rotate: 180deg;
 }
+
 #comp {
-  width: 370px;
-  height: 200px;
+  width: 23%; /* was 370px */
+  max-width: 370px;
+  aspect-ratio: 370/200;
   position: absolute;
   left: 5%;
   top: 3%;
   rotate: 30deg;
 }
+
 #sbilly {
-  width: 500px;
-  height: 200px;
+  width: 31%; /* was 500px */
+  max-width: 500px;
+  aspect-ratio: 500/200;
   position: absolute;
   right: -10%;
   top: 20%;
@@ -213,8 +219,9 @@ body {
 }
 
 #shockEmoji {
-  width: 200px;
-  height: 330px;
+  width: 12.5%; /* was 200px */
+  max-width: 200px;
+  aspect-ratio: 200/330;
   position: absolute;
   right: 20%;
   top: 10%;
@@ -226,19 +233,24 @@ body {
   position: absolute;
   left: 5%;
   top: 37%;
-  width: 450px;
-  height: 300px;
+  width: 28%; /* was 450px */
+  max-width: 450px;
+  aspect-ratio: 450/300;
 }
+
 #deer {
   position: absolute;
   left: 33%;
   bottom: 0;
-  width: 450px;
-  height: 180px;
+  width: 28%; /* was 450px */
+  max-width: 450px;
+  aspect-ratio: 450/180;
 }
+
 #guys {
-  width: 400px;
-  height: 200px;
+  width: 25%; /* was 400px */
+  max-width: 400px;
+  aspect-ratio: 400/200;
   position: absolute;
   right: 10%;
   bottom: 0;
@@ -249,8 +261,9 @@ body {
   position: absolute;
   right: 13%;
   bottom: 25%;
-  width: 400px;
-  height: 200px;
+  width: 25%; /* was 400px */
+  max-width: 400px;
+  aspect-ratio: 400/200;
   z-index: 50;
   rotate: 20deg;
 }
