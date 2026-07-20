@@ -17,10 +17,10 @@ const finalScreen = document.getElementById("finalScreen");
 const yesButton = document.getElementById("yesButton");
 const noButton = document.getElementById("noButton");
 const giftButton = document.getElementById("giftButton");
+const pedjaButton = document.getElementById("pedja");
 
 let rotationAngle = 0;
 
-const pedjaButton = document.getElementById("pedja");
 pedjaButton.addEventListener("click", () => {
   loadingScreen.style.display = "none";
   questionScreen.style.display = "flex";
