@@ -30,6 +30,7 @@ body {
   justify-content: center;
   background-color: black;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 #monkey {
@@ -51,13 +52,12 @@ body {
 }
 
 #question {
-  position: absolute;
-  font-size: 200%;
-  top: 10%;
+  font-size: clamp(1.5rem, 4vw, 3rem);
   color: rgb(255, 255, 255);
   text-align: center;
   z-index: 5;
-  width: 60%;
+  position: absolute;
+  top: 5%;
 }
 
 #yesimage,
@@ -76,8 +76,8 @@ body {
   border: none;
   background: transparent;
   padding: 0;
-  width: 150px;
-  height: 150px;
+  width: clamp(80px, 18vmin, 200px);
+  height: clamp(80px, 18vmin, 200px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,8 +91,8 @@ body {
   border: none;
   background: transparent;
   padding: 0;
-  width: 150px;
-  height: 150px;
+  width: clamp(80px, 18vmin, 200px);
+  height: clamp(80px, 18vmin, 200px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,17 +118,6 @@ body {
 #yesButton:hover + #hampster {
   transform: translateX(-50%) translateY(+20%);
   opacity: 1;
-}
-
-#buttons-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 10%;
-  position: relative;
-  z-index: 1;
 }
 #yesimage {
   width: 90%;
